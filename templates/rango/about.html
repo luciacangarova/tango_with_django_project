@@ -1,0 +1,33 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block body_block %}
+	<link href="http://v4-alpha.getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+	<div class="jumbotron">
+		<h1 class="display-3">Rango says...</h1>
+		<h3 class="display-3" style="font-size: 150%"> here is the about page. <br /> 
+		<strong>This tutorial has been put together by {{ boldmessage }}.</strong> </h3> <br /> 
+	</div>
+
+	<div> 
+		<img src="{% static 'images/dog.jpg' %}" alt="Picture of Dog" height="380" /> 
+		<img src="{{MEDIA_URL}}cat.jpg" alt="Picture of Cat" height="380">
+	</div> 
+
+	<hr/>
+	<div id="msg">Hello - I'm here for a JQuery Example too</div>
+	<hr/>
+
+	<div style="float: left;clear: left; width: 50%">
+		<p>visits: {{visits}}</p>
+		<button class="btn btn-primary" onClick="alert('You clicked the button using JavaScript.');">
+			Click Me - I run JavaScript
+		</button>
+	</div>
+	<div style="float: right; clear: right; width: 50%">
+		<p>This text is for a JQuery Example.</p>
+		<button class="btn btn-primary" id="about-btn">
+			Click Me - I'm JavaScript on Speed
+		</button>
+	</div>
+{% endblock %}
